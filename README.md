@@ -25,4 +25,4 @@ As this uses: ```__file__``` inside the code.
 ### Something else
 If you see no downloads, it means. __*uhhhhhhhhhhhh*__, i havent made the zip (it contains ADB, Fastboot, Compiled and Interpreted versions of the Shell.
 
-(COMPILED VIA __Nuitika__ for static, PyInstaller for dynamic builds)
+(COMPILED VIA _Official CPython_ for static, _PyInstaller_ for dynamic builds)
