@@ -12,6 +12,10 @@ Libraries used in the file:
 
 ```import platform```
 
+```import os```
+
+```from concurrent.futures import ThreadPoolExecutor```
+
 ## NOTICE
 For this to work, you'll need the entire Android Debug Bridge installation (including adb, .dlls, fastboot, hw etc...).
 As this uses: ```__file__``` inside the code.
@@ -19,6 +23,6 @@ As this uses: ```__file__``` inside the code.
 *(No Amount of adb-shell library functions were used)*
 
 ### Something else
-If you see no downloads, it means. __*uhhhhhhhhhhhh*__, i havent made the zip (it contains drivers, ADB, Fastboot, Compiled and Interpreted versions of the Shell.
+If you see no downloads, it means. __*uhhhhhhhhhhhh*__, i havent made the zip (it contains ADB, Fastboot, Compiled and Interpreted versions of the Shell.
 
 (COMPILED VIA __Nuitika__ for static, PyInstaller for dynamic builds)
