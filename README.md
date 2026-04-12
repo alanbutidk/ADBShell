@@ -2,6 +2,12 @@
 
 ADBShell is a shell wrapper written in __Python 3.13__. This *Shell Wrapper* works by taking inputs (hardcoded, case-sensitive) and executing specific commands, using the subprocess library, pathlib library, platform library, and the __*average snake standard library*__.
 
+## About files
+
+*shell.c* is the Cython translation to the shell.py done on a Windows x86_64 Host
+
+*shell.py* is the orignal python file which contains the orignal code of the shell
+
 ## Libraries Used
 
 Libraries used in the file:
