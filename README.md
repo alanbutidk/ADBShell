@@ -22,13 +22,59 @@ Libraries used in the file:
 
 ```from concurrent.futures import ThreadPoolExecutor```
 
-## NOTICE
-For this to work, you'll need the entire Android Debug Bridge installation (including adb, .dlls, fastboot, hw etc...).
-As this uses: ```__file__``` inside the code.
+## Installing
 
-*(No Amount of adb-shell library functions were used)*
+To install, choose your desired flavour while downloading: the full .zip or the standalone .exe of the shell, the .py version of the shell or the Cython .c version of the shell.
 
-### Something else
-If you see no downloads, it means. __*uhhhhhhhhhhhh*__, i havent made the zip (it contains ADB, Fastboot, Compiled and Interpreted versions of the Shell.
+_*If you choose .zip*_: 
 
-(COMPILED VIA _Official CPython/Cython_ for static, _PyInstaller_ for dynamic builds)
+Extract the zip to anywhere on your PC, examples: C:\Users\MyUser\Downloads\ADBShell_OSTYPE_FOR_.zip -> C:\Users\MyUser\
+
+or
+
+/root/MyDownloads/ADBShell_OSTYPE_FOR_.zip -> /root/MyDownloads/ADBShell/
+
+You can extract the zip by many popular programs like:
+
+*WinRAR* -> Supports ZIP and RAR formats; Free+Classic
+
+*7Zip* -> ZIP, ISO formats; Open-Source+Free+Classic
+
+Now, you can either add it to your Path or directly launch cmd.exe at the location; both are fine.
+
+To add it to your PATH:
+
+*Windows*:
+Open _View Advanced System Settings_ window, Click on "Environment Variables", User variables for MyUser (Example user name), Click on the PATH One under the text
+
+Click on New, Put the PATH where the folder exists (Example: C:\Users\MyUsers\Downloads\ADBShell), Press enter and OK, OK, OK on all windows.
+
+Now you can call it from anywhere you want (adb.exe & fastboot.exe)
+
+OR
+
+Open a CMD Window at the Folders Path
+and "python.exe shell.py" OR "ADBShell.exe"
+
+*Linux*:
+
+Enter "echo $0" in your terminal to find out your terminal:
+
+*If it is _Bash_*:
+
+Use Vim or GNU Nano to open up this exact path: "nano ~/.bashrc" or "vim ~./bashrc"
+
+Go to the bottom and enter this line:
+
+*export PATH="$PATH:/your/shell/path/"*
+
+where "/your/shell/path" is the full path to the Folder that contains the binaries
+
+and Exit the editor after saving (Nano: ctrl+s; ctrl+x, Vim: esc; :wq)
+
+*If it is _Zsh_*:
+
+Open up ~/.zshrc
+and do the same as bash
+
+*_If it is a executable/.py file_*: Place it somewhere
