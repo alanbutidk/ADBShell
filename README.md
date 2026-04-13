@@ -1,6 +1,8 @@
+WEBSITE: [ADBShell Website](https://alanbutidk.github.io/ADBS)
+
 # ADBShell
 
-ADBShell is a shell wrapper written in __Python 3.13__. This *Shell Wrapper* works by taking inputs (hardcoded, case-sensitive) and executing specific commands, using the subprocess library, pathlib library, platform library, and the __*average snake standard library*__.
+ADBShell is a shell wrapper written in __Python 3.13__. This *Shell Wrapper* works by taking inputs (hardcoded, case-sensitive) and executing specific commands, using the subprocess library, os library, concurrent library, pathlib library, platform library, and the __*average snake standard library*__.
 
 ## About files
 
