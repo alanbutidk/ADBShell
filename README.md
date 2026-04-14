@@ -1,4 +1,4 @@
-WEBSITE: [ADBShell Website](https://alanbutidk.github.io/ADBS)
+Website: [ADBShell Website](https://alanbutidk.github.io/ADBS)
 
 # ADBShell
 
