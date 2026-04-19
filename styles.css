@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  --space-gradient: radial-gradient(circle at bottom left, #FFFFFF 0%, #000000 100%);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-main: #ffffff;
+}
+@property --grad-color-1 {
+  syntax: '<color>';
+  initial-value: #FFFFFF;
+  inherits: false;
+}
+
+@property --grad-color-2 {
+  syntax: '<color>';
+  initial-value: #000000;
+  inherits: false;
+}
+body {
+  margin: 0;
+  padding: 40px;
+  min-height: 100vh;
+  background: radial-gradient(circle at bottom left, var(--grad-color-1) 0%, var(--grad-color-2) 100%);
+  background-attachment: fixed;
+  transition: --grad-color-1 0.8s ease, --grad-color-2 0.8s ease;
+  color: 808080;
+  font-family: 'Roboto Mono', 'Courier New', monospace; 
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.ui-btn {
+  font-family: 'Roboto Mono', monospace;
+  padding: 10px 20px;
+  border-radius: 50px; /* Rounded rectangle shape */
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.ui-btn:hover { background: rgba(255,255,255,0.2); }
+.settings-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hidden { display: none; }
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+.mono-detail {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.fade-box {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-box:hover {
+  opacity: 1;
+}
+/* Button Styling */
+.toggle-btn {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--glass-bg);
+  color: white;
+  border: 1px solid var(--glass-border);
+  padding: 12px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+body.inverted {
+  --space-gradient: radial-gradient(circle at bottom left, #000000 0%, #FFFFFF 100%);
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>ADBShell</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Gradient Control</h1>
+  <div class="button-group">
+    <button id="toggle-btn" class="ui-btn" style="color: black;">Toggle Gradient</button>
+    <button id="settings-btn" class="ui-btn" style="color: black;">Custom Color</button>
+  </div>
+
+  <div id="settings-panel" class="settings-box hidden">
+    <label>Inner Color: <input type="color" id="color1" value="#FFFFFF"></label>
+    <label>Outer Color: <input type="color" id="color2" value="#000000"></label>
+  </div>
+</div>
+<hr>
+<h1>Introduction to ADBShell</h1>
+<hr>
+<p>ADBShell is a wrapper for ADB & Fastboot, instead of learning all commands and keeping "adb help" and "fastboot help" at all times, use ADBShell!</p>
+<p>ADBShell makes commands like: "adb shell getprop" to: "check"</p>
+<p>Instead of: adb reboot fastboot, do: "reboot fastboot"... uh, yeah i dont see any diffrence there, except the "adb" part gone</p>
+
+<hr>
+
+
+<h2>Why you should use it</h2>
+
+<p>It makes me happy</p>
+<p>It automates using ADB (mentioned for the 1000<sup>th</sup> time)</p>
+
+
+<hr>
+
+<h1>Download</h1>
+<div class="fade-box">
+<p>Download the ADBShell executables:</p>
+<a href="thankdynamicwin.html">Download the Dynamic/Normal version</a>
+<br>
+<a href="thankstaticwin.html">Download the Static version</a>
+<br>
+<a href="thankzipwin.html" >Download the Full bundle with ADB, Fastboot, Static and Dynamic and even Interpreted version of the shell!</a>
+<br>
+<a href="https://github.com/alanbutidk/ADBShell">Visit the Repository</a>
+<br>
+<a href="thanksrczipwin.html">Get the source code as a .zip file</a>
+<br>
+<a href="thanksrcgz.html">Get the Source code as a .tar.gz file</a>
+</div>
+<hr>
+
+<h3>Small Area for INFO UPON LICENSE</h3>
+
+<p>Uses the GPL3 License, built upon ADB Binaries as a base, platform-tools license also located (dont sue me please)</p> 
+
+<hr>
+
+<h1>Compilation & Language
+
+<p>Written in <strong>Python 3.13.7</strong>...
+<br>Compiled using:
+<hr>
+</p>
+<br><p style="font-size: 40px;">Cython:
+<br>
+gcc -static -O2 adbshell.c -o adbshell.exe -lpython313</p>
+<hr>
+<br>
+Pyinstaller:<br><strong>pyinstaller --onefile adbshell.py</strong>
+<hr>
+</p>
+
+<h2>Collaborate</h2>
+<p>Oh! you've came here to the helping zone... If you want to collaborate and help make it more appealing or special. You can help!</p>
+<p style="font-size: 18px;">Code starting below:</p>
+<div class="code-box">
+<pre>
+
+<code style="font-size: 20px;">
+
+##For collaborating to the project, a file called "collab.adf" will be there,
+##So, enter your username & the date it was added changes to in this format:
+
+;;MyExampleName : 13/04/26;;
+
+##In this format, above here
+</code>
+</pre>
+</div>
+
+<hr>
+<div class="fade-box">
+
+<h1>Credits</h1>
+<p>Credits to Android Developers, <a href="https://developer.android.com/tools/adb">Android Developers ADB Website</a></p>
+
+</div>
+
+<hr>
+<h2>My socials</h2>
+<a href="https://youtube.com/@Alancodes0">My Youtube Channel</a>
+<br>
+<a href="https://github.com/Alanbutidk">My Github profile</a>
+<hr>
+<footer>
+<p><b>@AlanCodes0 Youtube, 2026</p>
+<p>Always open-source, always free</b></p>
+</footer>
+<script>
+const body = document.body;
+const settingsBtn = document.getElementById('settings-btn');
+const settingsPanel = document.getElementById('settings-panel');
+const color1Input = document.getElementById('color1');
+const color2Input = document.getElementById('color2');
+
+//Toggle Opposite Functionality
+document.getElementById('toggle-btn').addEventListener('click', () => {
+  const current1 = getComputedStyle(body).getPropertyValue('--grad-color-1').trim();
+  const current2 = getComputedStyle(body).getPropertyValue('--grad-color-2').trim();
+  
+  // Swap the colors smoothly
+  body.style.setProperty('--grad-color-1', current2);
+  body.style.setProperty('--grad-color-2', current1);
+});
+
+//Settings Panel Toggle
+settingsBtn.addEventListener('click', () => {
+  settingsPanel.classList.toggle('hidden');
+});
+
+//Update Gradient from Settings
+[color1Input, color2Input].forEach(input => {
+  input.addEventListener('input', () => {
+    body.style.setProperty('--grad-color-1', color1Input.value);
+    body.style.setProperty('--grad-color-2', color2Input.value);
+  });
+});
+
+</script>
+</body>
+</html>
