@@ -1,7 +1,0 @@
-*.exe
-Non/
-*.dll
-Website/
-releases/
-mke2fs.conf
-source.properties
