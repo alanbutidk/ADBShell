@@ -1,0 +1,7 @@
+*.exe
+Non/
+*.dll
+Website/
+releases/
+*.conf
+*.properties
