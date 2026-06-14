@@ -3,5 +3,5 @@ Non/
 *.dll
 Website/
 releases/
-*.conf
-*.properties
+mke2fs.conf
+source.properties
